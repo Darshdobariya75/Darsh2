@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>append</title>
+    <style>
+     
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+            <button>click to add in list</button>
+            <ul>
+                    <li>list 1</li>
+                    <li>List 2</li>
+            </ul>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti quia molestiae a nobis voluptatum optio nulla nemo dolorem atque doloremque ex dicta odit earum fugiat, alias quos adipisci? Veniam unde enim provident minus commodi ullam eaque maxime sapiente consequuntur maiores quaerat, error sed odio, quo fugit quibusdam eveniet ea nam similique sequi dolorem aut natus neque beatae? Ipsum voluptas excepturi laudantium dolores, voluptate hic possimus nisi natus exercitationem debitis saepe eligendi inventore quibusdam id voluptatum. Quisquam odio nisi ipsum necessitatibus eius quod doloribus natus, expedita voluptatum id similique quas fuga, aperiam quo nihil porro commodi ullam repellat sit aliquid laborum in reprehenderit architecto? Consequuntur pariatur voluptate corporis eaque beatae id deserunt, eveniet provident veniam atque iusto quas animi nesciunt harum sed excepturi esse? Tenetur reprehenderit eos maiores iure pariatur ipsam eum dolores rem placeat vero quaerat, commodi quidem voluptatibus sunt ipsum officiis iste. Dicta nostrum incidunt quod quidem, voluptatibus labore consequuntur, explicabo minus esse ad dolor veritatis. Et explicabo corporis cum distinctio beatae, nisi adipisci. Neque porro magnam veritatis, tempora illum tenetur eos iusto est totam aut architecto doloremque. Sint accusantium excepturi quos unde ullam a magni illum cupiditate animi architecto atque consequuntur nihil est, expedita hic voluptatum ut pariatur?</p>
+    <script>
+      $(document).ready(function () {
+        $("p").show();
+
+        $("button").click(() => {
+          $("ul").append("<li> Append from jquery </li>");
+        });
+      });
+    </script>
+  </body>
+</html>

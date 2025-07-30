@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+</head>
+<body>
+    <h1>Form Using JS</h1>
+    <form name="fr" onsubmit="return validd()">
+        Email: <input type="text" id="email" name="email"><br><br/>
+        <input type="submit" />
+    </form>
+    
+    <script>
+        function validd() {
+            let emaill = document.forms['fr']['email'].value;
+            let checkk = emaill.match(/@/g)
+            let preindex = emaill.search(/@/g)-1;
+            let postindex = emaill.search(/@/g)+1;
+
+            if(checkk==null){
+                console.log('Invalid Email')
+                return false;
+            }
+            else if(emaill[preindex]==undefined){
+                console.log('Invalid Email')
+                return false;
+            }
+            else if(emaill[postindex]==undefined){
+                console.log('Invalid Email')
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+
+        // task 19032025 : URL 
+
+        let data = 'grras@123.com';
+        console.log(data.search(/@/g))
+        console.log(data[30])
+    </script>
+</body>
+</html>

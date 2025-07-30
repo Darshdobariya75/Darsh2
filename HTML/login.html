@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login pages</title>
+    <style>
+        body{
+            background-color: rgb(215, 209, 209);
+        }
+        .conteanar{
+            border: 2px solid gray;
+            height: 450px;
+            width: 700px;
+            margin-top:70px;
+            margin-left: 250px;
+            box-shadow:2px 2px 40px rgb(87, 87, 87);
+            border-radius:50px;
+           position: absolute;
+            display: flex;
+           
+        }
+        .leftside{
+            height: 450px;
+            width:300px ;
+            background-color: #fed501;
+            border-radius: 50px 0px 0px 50px;
+            text-align: center;
+        }
+        .rightside{
+            background-color:white;
+            width: 400px;
+            border-radius:  0px 50px 50px 0px;
+        }
+        .form-conteanar{
+            display: flex;
+            margin: 10%;
+            justify-content: center;
+        }
+
+        .forlabel{
+            width: 100px;
+        }
+        input[type='submit']{
+            background-color: rgb(69, 232, 178);
+            color: white;
+            border-radius: 10px;
+            height:50px;
+            width:70px;
+        }
+        .h1{
+            font-size:30px;
+
+            font-weight: 70px;
+            margin-top: 70px;
+        }
+        .imges{
+            height:200px;
+            width:200px;
+            
+        }
+        input{
+            background-color: transparent;
+            border:none;
+            border-bottom: 1px solid black;
+        }
+        input:focus{
+            outline:none;
+        }
+        .i1{
+            height: 40px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+   <div class="conteanar">
+    <div class="leftside">
+        <img src="./image/WhatsApp Image 2025-07-19 at 09.50.12_34f78558.jpg" alt="" class="imges">
+        <div class="h1">Let's get you set up </div>
+        <div class="h2">Itshould only take a couple of minutes to pair with your watch</div>
+         <img src="./image/WhatsApp Image 2025-07-19 at 09.50.13_50d49d98.jpg" alt="" class="i1">
+    </div>
+    <div class="rightside">
+        <form action="">
+            <div class="form-conteanar">
+                <div class="forlabel">
+                    <label>Name</label>
+                </div>
+                <div class="forinput">
+                    <input type="text">
+                </div>
+            </div>
+            <!--  -->
+             <div class="form-conteanar">
+                <div class="forlabel">
+                    <label>Email</label>
+                </div>
+                <div class="forinput">
+                    <input type="email">
+                </div>
+            </div>
+            <!--  -->
+             <div class="form-conteanar">
+                
+                <div class="forlabel">
+                    <label>Male</label>
+                </div>
+                <div class="forinput">
+                    <input type="radio">
+                </div>
+                <!--  -->
+                <div class="forlabel">
+                    <label>Female</label>
+                </div>
+                <div class="forinput">
+                    <input type="radio">
+                </div>
+            </div>
+            <!--  -->
+             <div class="form-conteanar">
+                <div class="forlabel">
+                    <label>Date of Birth</label>
+                </div>
+                <div class="forinput">
+                    <input type="date">
+                </div>
+            </div>
+            <!--  -->
+            <div class="form-conteanar">
+                <div class="forlabel">
+                    <label>mobile</label>
+                </div>
+                <div class="forinput">
+                    <input type="tel">
+                </div>
+            </div>
+            <!--  -->
+            <div class="form-conteanar">
+                <input type="submit">
+                
+            </div>
+            <!--  -->
+            
+        </form>
+    </div>
+   </div>
+</body>
+</html>

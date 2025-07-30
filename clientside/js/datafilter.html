@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Data using js</title>
+</head>
+<body>
+    
+    <h1>Filter using js</h1>
+
+    <script>
+        // data
+        let data = [
+            {name: 'John', age: 25, country: 'USA', gender:'male'},
+            {name: 'Jane', age: 30, country: 'UK', gender:'female'},
+            {name: 'Bob', age: 35, country: 'Canada', gender:'male'},
+            {name: 'Alice', age: 20, country: 'Australia', gender:'female'},
+            {name: 'Emma', age: 45, country: 'France', gender:'female'},
+            {name: 'Tom', age: 50, country: 'Italy', gender:'male'},
+            {name: 'Lily', age: 55, country: 'Spain', gender:'female'},
+            {name:'Mike', age:25, country:"Canada", gender:"male"},
+            {name:'Jane', age:30, country:"USA", gender:"female"},
+            {name:'Malti', age:29, country:"UAE", gender:"female"},
+            {name:'Rahul', age:28, country:"India", gender:"male"},
+            {name:'Johnnn', age:28, country:"India", gender:"male"}
+        ]
+        // filter data
+
+        var searchh = '28'
+        for(i=0;i<data.length;i++){
+            if(data[i]['gender']==searchh | data[i]['name']==searchh | data[i]['age']==searchh | data[i]['country']==searchh){
+                console.log(data[i])
+            }
+        }
+    </script>
+</body>
+</html>

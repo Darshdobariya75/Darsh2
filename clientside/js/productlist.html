@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+<body>
+    
+    <div id="container"></div>
+
+    <script>
+        async function apiii() {
+            let api = await fetch("https://fakestoreapi.com/products");
+            let jd = await api.json()
+            // console.log(jd)
+
+            var result=''
+            for(i=0;i<jd.length;i++){
+                console.log(jd[i])
+                // document.getElementById("container").innerHTML=jd[i]['id']
+                result+=`<div class="box"> Product id : ${jd[i]['id']} <br/>
+                        <img  src=${jd[i]['image']} width="200px" height="200px" />
+                     </div>`
+            }
+
+            document.getElementById('container').innerHTML=result;
+        }
+        apiii()
+    </script>
+</body>
+</html>

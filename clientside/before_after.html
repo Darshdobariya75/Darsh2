@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before & After</title>
+
+    <style>
+        .box{
+            background-color: cyan;
+            height: 100px;
+        }
+        .box::before{
+            content: "Before : ";
+            background-color: gray;
+            display: block;
+            height: 30px;
+        }
+        .box::after{
+            content: " : after : ";
+            background-color: plum;
+            display: block;
+            height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">Lorem ipsum dolor sit amet.lorem100 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta commodi non, repudiandae vel pariatur quia quis iusto perspiciatis quo officia, asperiores a nam eligendi blanditiis neque ullam. Omnis dolores temporibus debitis nulla sapiente ducimus quam, corrupti natus quos, facilis minima voluptatem consequatur ea deserunt fugiat aliquam! Unde id libero assumenda, explicabo debitis suscipit enim voluptatem blanditiis laudantium minima doloremque iste fugiat nisi, corporis adipisci reiciendis commodi nostrum officiis eos hic. Praesentium eius nobis a voluptates, consequatur, atque temporibus ut est repellendus nam accusantium dolorum iusto vitae distinctio quod, similique quae non sapiente sed! Hic, aliquam quis veniam ex animi alias?</div>
+</body>
+</html>

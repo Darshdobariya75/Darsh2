@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio website</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family:'popins',sans-serif;
+        }
+        body{
+            background-color: #081b29;
+            color: #ededed;
+        }
+        .header{
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            padding: 20px 10%;
+            background-color: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+        .logo{
+            font-size: 25px;
+            color: #ededed;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .navbar a{
+            font-size: 18px;
+            color: #ededed;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            transition: .3s;
+        }
+        .navbar a:hover,
+        .navbar a.active{
+            color: #00abf0;
+        }
+        .home{
+            height: 100vh;
+            background: url(./image/WhatsApp\ Image\ 2025-07-03\ at\ 19.00.27_f87388b7.jpg) no-repeat;
+            background-size: 110vh;
+            background-position: right;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+        }
+        .home-content{
+            max-width: 600px;
+        }
+        .home-content h1{
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.2 ;
+        }
+        .home-content h3{
+            font-size: 32px;
+            color: #00abf0;
+            font-weight: 700;
+        }
+        .home-content p{
+            font-size: 16px;
+            margin: 20px 0 40px;
+        }
+        .home-content .btn-box{
+            width: 345px;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .btn-box a{
+            position: relative;
+            display: inline-flex;
+            width: 150px;
+            height: 100%;
+            background-color: #00abf0;
+            border: 2px solid #00abf0;
+            border-radius: 8px;
+            font-size: 19px;
+            color: #081b29;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            overflow: hidden;
+            transition: .5s;
+        }
+        .btn-box a:hover{
+            color: #00abf0;
+        }
+        .btn-box a:nth-child(2){
+            background-color: transparent;
+            color: #00abf0;
+        }
+        .btn-box a:nth-child(2)::before{
+            background:  #00abf0;    
+        }
+        .btn-box a:nth-child(2):hover{
+            color: #081b29;
+        }
+        .btn-box a::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: #081b29;
+            z-index: -1;
+            transition: .5s;
+        
+        }
+        .btn-box a:hover:before{
+            width: 100%;
+        }
+        .btn-box.btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+        .home-sci{
+            position: absolute;
+            bottom: 40px;
+            width: 170px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .home-sci a{
+            position: relative;
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border:  2px solid #00abf0;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #00abf0;
+            text-decoration: none;
+            justify-content: center;
+             align-items: center;
+             z-index: 1;
+             overflow: hidden;
+             transition: .5s;
+        }
+        .home-sci a:hover{
+            color: #081b29;
+        }
+        .home-sci a::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color:#00abf0;
+            z-index: -1;      
+            transition: .5s;
+        }
+        .home-sci a:hover:before{
+            width: 100%;
+        }
+        .about{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 2rem;
+            background: var(--second-bg-color);
+            padding-bottom: 6rem;
+
+        }
+        .heading{
+            margin-top: 50px;
+            font-size: 5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        span{
+            color: #00abf0; 
+        }
+        .about-img{
+            position: relative;
+            height: 25rem;
+            width: 25rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -50px;
+        }
+         .about-img img{
+            width: 75%;
+            border-radius: 50%;
+            border: 2rem solid var(--main-color);
+            margin-right: 500px;
+         }
+          .about-img .circle-spin{
+            position: absolute;
+            top: 50%;
+            left: -12.5%;
+            transform: translate(-50% ,-50%) rotate(0);
+            width: 85%;
+            height: 85%;
+            border-radius: 50%;
+            border-top: .2rem solid red;
+            border-bottom: .2rem solid red;
+            border-left: .2rem solid #00abf0;
+            border-right: .2rem solid #00abf0;
+           
+          }
+          .about-content{
+            width:500px;
+            margin-top: -350px;
+            margin-left: 500px;
+            font-size:20px;
+          }
+            .btn{
+                margin-left: 170px;
+                margin-top: 70px;
+                height:10px;
+                width: 100px;
+            }
+            .education{
+            background-color: #081b29;
+            color: #081b29;
+          }
+         .timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.timeline .container {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+}
+.timeline .left {
+  left: 0;
+}
+.timeline .right {
+  left: 50%;
+}
+.timeline .content {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  position: relative;
+}
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background: white;
+  top: 0; bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.timeline .container::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 4px solid #007bff;
+  top: 20px;
+  border-radius: 50%;
+  z-index: 1;
+}
+.timeline .left::after {
+  right: -10px;
+}
+.timeline .right::after {
+  left: -10px;
+}
+@media screen and (max-width: 600px) {
+  .timeline .container {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .timeline .container::after {
+    left:50px;
+
+              }
+}
+
+.projects-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+/* Grid Layout */
+.project-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Card */
+.project-card {
+  height: 500px;  
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-details {
+  padding: 1rem;
+  margin-top: 10px;
+}
+
+.project-details h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: black;
+}
+
+.project-details p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: black;
+}
+
+.tech-stack {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.project-links a {
+  display: inline-block;
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+  color: #004080;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .project-image {
+    height: 160px;
+  }
+}
+
+.project-image{
+    height: 350px;
+   width:550px;
+}
+
+.content{
+        min-height:auto;
+        padding-bottom:7rem;
+}
+.content form{
+    max-width: 70rem;
+    margin:0 auto;
+    text-align:center;
+}
+.content form .input-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.content form .input-box .input-field{
+    position: relative;
+    width: 49%;
+    margin:.8rem 0;
+}
+.content form .input-box .input-field input,
+.content form .textarea-filed textarea{
+    width:80%   ;
+    height:70%;
+    padding:1.5rem;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    background: transparent;
+    border-radius:.6rem;
+    border:.2rem solid #00abf0;
+    /* gap: rem; */
+}
+.btn{
+    height:50px;
+    background-color:#00abf0;
+    margin-right: 100px;
+    color:black;
+    box-shadow: none;
+    border-radius: 10px;
+    border: hidden;
+}
+.skills{
+  min-height: auto;
+  padding-bottom: 7rem;
+  background:var(--second-bg-color);
+}
+.skills .skills-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:5rem;
+}
+.skills-row .skills-column{
+        flex: 1 1 45%;
+}
+.skills-column .title{
+    font-size: 2.5rem;
+    margin:0 0 1.5rem;
+}
+.skills-box  .skills-content{
+    position: relative;
+    border:.2rem solid #00abf0;
+    border-radius:.6rem;
+    padding:.5rem 1.5rem ;
+    z-index: 1;
+    overflow: hidden;
+}
+.skills-box  .skills-content::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width:0;
+      height:100%;
+      background:#004080;
+      z-index:-1;
+      transition:.5s;
+}
+.skills-box  .skills-content:hover:before{
+    width: 100%;
+}
+
+.skills-content  .progress{
+    padding: 1rem 0 ;   
+}
+.skills-content  .progress h3{ 
+  font-size:1.7rem;
+  display: flex;
+  justify-content:space-between;
+}
+.skills-content  .progress h3 span{
+  color:white;
+}
+.skills-content  .progress .bar{
+    height: 2.5rem;
+    border-radius:.6rem;
+    border:.2rem solid #00abf0;
+    padding: .5rem;
+    margin:1rem 0;
+}
+.skills-content  .progress .bar span{
+          display: block;
+          height: 100%;
+          border-radius:.3rem;
+          background: #00abf0;  
+}
+.skills-column:nth-child(1) .skills-content  .progress:nth-child(1) .bar span{
+  width: 90%;
+}
+.skills-column:nth-child(1) .skills-content  .progress:nth-child(2) .bar span{
+  width: 90%;
+}
+.skills-column:nth-child(1) .skills-content  .progress:nth-child(3) .bar span{
+  width: 65%;
+}
+.skills-column:nth-child(1) .skills-content  .progress:nth-child(4) .bar span{
+  width:80%;
+}
+.skills-column:nth-child(2) .skills-content  .progress:nth-child(1) .bar span{
+  width: 85%;
+}
+.skills-column:nth-child(2) .skills-content  .progress:nth-child(2) .bar span{
+  width: 90%;
+}
+.skills-column:nth-child(2) .skills-content  .progress:nth-child(3) .bar span{
+  width: 60%;
+}
+.skills-column:nth-child(2) .skills-content  .progress:nth-child(4) .bar span{
+  width:70%;
+}
+@media (max-width:300px) {
+  .timeline .container {
+    width:200%;
+    left: 0 !important;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .about-img{
+    margin-left: 500px;
+  }
+  .about-content{
+    margin-top: -40px;
+    margin-left:20px;
+    width: 700px;
+  }
+  .btn{
+    margin-top: 10px;
+    margin-left: 40px;
+  }
+  .project-image{
+    height: 330px;
+    width: 350px;
+  }
+  .project-card{
+    width: 350px;
+  }
+  .timeline::after{
+    height: 0px;
+    width: 0px;
+  }
+}
+
+
+</style>
+    
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Darsh.</a>
+
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#project">Project</a>
+            <a href="#">Contect</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-content">
+            <h1>HI I'M DARSH</h1>
+            <h3>Fullstack devloper</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit beatae dolore distinctio porro impedit tempore. Dolorum a iusto quasi commodi assumenda fugiat at veniam, dolorem debitis officiis.</p>
+            <div class="btn-box">
+                <a href="#">HIRE ME</a>
+                <a href="#">LET'S TALK</a>
+            </div>
+        </div>
+        <div class="home-sci">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-twitter' ></i></a>
+            <a href="https://www.linkedin.com/in/darsh-dobariya-6aa8ab35a/"><i class='bx bxl-linkedin' ></i></a>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <h2 class="heading">About <span>Me</span></h2>
+        <div class="about-img">
+            <img src="./image/11zon_cropped.png" alt="">
+            <span class="circle-spin"></span>
+        </div>
+        <div class="about-content">
+            <h1>Frontend Developer!</h1><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias officia et eaque commodi repudiandae quae, quia vero ea explicabo exercitationem soluta deleniti neque rem debitis? Perferendis commodi optio inventore error dolorem nostrum, sunt fugit reiciendis temporibus eligendi itaque est pariatur mollitia alias non, quis ipsa, dolore eos odit sequi quae recusandae et? Dolorem obcaecati architecto neque voluptates minus.</p>
+        <div class="btn-box btns">
+            <a href="#" class="btn">Read more</a>
+        </div>
+        </div>
+
+    </section>
+    <!-- education section  -->
+    <section id="education" class="education" style="padding:80px 20px; background:#081b29;">
+  <h2 style="text-align:center; font-size:4em; margin-bottom:40px;color: white;">
+    🎓 Education & Journey
+  </h2>
+  <div class="timeline">
+    <div class="container left">
+      <div class="content">
+        <h3>12th Grade – Shree Abhinav Vidya Mandir (2024)</h3>
+        <p><strong>Board:</strong> Gujarat board• <strong>Stream:</strong> [Commerce] • <strong>Grade:</strong> [e.g., 82%]</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h3>Graduation – Gujarat University (2024-25)</h3>
+        <p><strong>Degree:</strong> BCA  [] • <strong>Project:</strong> ...-</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!--project-->
+     <section class="projects-section" id="project">
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="project-grid">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="./image/Screenshot 2025-07-23 114907.png" alt="Project 1 Screenshot" class="project-image">
+        <div class="project-details">
+          <h3>Weather Dashboard</h3>
+          <p>Real-time weather app using OpenWeatherMap API and geolocation.</p>
+          <p class="tech-stack">Tech: HTML, CSS, JS</p>
+          <div class="project-links">
+            <a href="https://github.com/Darshdobariya75/Darsh">GitHub</a>
+            <a href="#">Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="./image/Screenshot 2025-07-23 113145.png" alt="Project 2 Screenshot" class="project-image" height="100%" width="100%">
+        <div class="project-details">
+          <h3>Login Page</h3>
+          <p>Responsive personal login with contact form and animations.</p>
+          <p class="tech-stack">Tech: HTML, CSS</p>
+          <div class="project-links">
+            <a href="https://github.com/Darshdobariya75/Darsh">GitHub</a>
+            <a href="#">Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more cards as needed -->
+
+    </div>
+
+  </section>       
+           
+
+  
+
+</body>
+</html>

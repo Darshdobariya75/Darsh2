@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate </title>
+    <style>
+        body{overflow: hidden;}
+        p{
+            background-color: green;
+            position: relative;
+            height: 400px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <button>click to hide para</button>
+    <button class="show">Click to show para</button>
+    <p></p>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ullam voluptatem accusamus enim quod adipisci illum blanditiis, hic cumque laboriosam quas aliquid ratione saepe. Laborum temporibus voluptates dignissimos illum accusantium unde ab aut et rem a optio assumenda placeat repellendus vitae voluptatem atque reprehenderit delectus quam, minima repudiandae architecto! Eum laboriosam fugit placeat accusantium eos, a dolorum, ipsum sit inventore delectus harum tenetur, aliquam consectetur voluptatem iste repudiandae dicta magni nam. Quia exercitationem ullam facere vitae nobis inventore, ducimus sint? Iure animi sed iusto nihil soluta! Eaque soluta nesciunt voluptate, iure facere quasi ipsam ipsum necessitatibus veniam cumque a totam vel aperiam qui aliquid eum libero laudantium quam quos pariatur. Animi quos dolores nesciunt incidunt nam quasi sapiente in minima? Voluptatem eveniet esse dolorem modi. Hic placeat enim, quidem perferendis neque necessitatibus earum. Aliquid nesciunt, nam perferendis assumenda consequatur dignissimos natus consequuntur id fuga modi sit ex quaerat, omnis earum! Suscipit, iste accusantium. Blanditiis magni excepturi quas ex voluptatibus, consectetur nostrum natus a! Nihil cum, nostrum quisquam accusantium delectus sunt ipsam culpa repellendus. Ad excepturi iusto rem! Quis libero fugit ea explicabo facere suscipit nam voluptatibus. Illo sit exercitationem maxime blanditiis error unde, recusandae suscipit placeat odit et similique porro a alias accusantium, repellendus laboriosam commodi voluptatibus facere repellat? Cumque reiciendis a cupiditate quibusdam tempore, delectus laudantium vitae corporis amet. Nisi, dolore culpa quisquam reiciendis nostrum assumenda ipsum fugit molestias. Odit dignissimos minima sit adipisci nobis rem amet illum vero fuga aliquid quis qui enim veritatis obcaecati aspernatur architecto commodi, sapiente assumenda vitae culpa voluptates ex? Consequuntur corporis debitis natus. Voluptatibus nam odio dolores blanditiis dicta error similique, in repudiandae. Enim obcaecati recusandae, possimus, sed mollitia labore repudiandae, quia molestiae eius vel porro consectetur! Velit praesentium natus nisi illum? Minima delectus, veritatis harum, doloremque nesciunt provident sit numquam at architecto, sint veniam dolorum? Perspiciatis, eveniet. Quidem ex aut nesciunt minima ipsum, a doloremque unde ab aliquam laboriosam officia, explicabo exercitationem veritatis ducimus hic, accusantium tempore? Laborum ipsam obcaecati nemo et nostrum incidunt quis aliquam consequatur expedita, corporis dolorum exercitationem, corrupti debitis. Aliquid animi natus, maxime harum illo aspernatur sapiente quas, dolore quod quis perferendis. Magni officia, reiciendis nobis quis officiis, sit quibusdam porro vero vel illo alias quaerat non culpa hic consequatur. Explicabo quisquam quidem consectetur optio, dignissimos nisi, aspernatur asperiores deleniti consequatur neque velit! Doloribus reprehenderit saepe, amet, at ipsum quam earum odit quis dolorum vel minus laborum assumenda! Doloribus asperiores veniam cumque placeat. Nisi unde, minima exercitationem fugiat aperiam non suscipit iusto ipsa sunt impedit a hic dolor obcaecati ex officia. Voluptatibus incidunt ut autem veniam odio illum, nisi quo, aliquid inventore voluptatem harum aut recusandae, exercitationem soluta molestias quae voluptates minus nemo. Minima eius eveniet magnam itaque, esse corporis voluptatem dicta est quia repellat, blanditiis quibusdam ad voluptatum molestias cupiditate. Ea explicabo, reiciendis ex optio dolorem quidem similique eaque doloremque, voluptas possimus ipsam cupiditate quisquam. Iure, dolorum accusantium deserunt sint corporis error, mollitia illo, itaque veniam distinctio iusto rerum blanditiis aliquid? Illum, delectus consequuntur! Praesentium, sit quis!</div>
+    <script>
+
+            $(document).ready(function(){
+                
+                $('p').show()
+
+                $('button').click(()=>{
+                    $("p").animate({left:"100px",top:"50px"})
+                })
+                
+            })
+
+    </script>
+
+</body>
+</html>

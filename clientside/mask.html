@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mask Image</title>
+    <style>
+        body{background-color: gray;}
+        .box{
+            /* width: 500px; */
+            height: 670px;
+            background-color: bisque;
+            mask-image: url(./media/mask.png);
+            mask-size: 250px;
+            mask-repeat: no-repeat;
+            /* mask-position: 0px; */
+            animation-name: anim;
+            animation-duration: 5s;
+        }
+
+        @keyframes anim {
+            0%{
+                mask-position: 0px 0px;
+            }
+            20%{
+                mask-position: 0px 10px;
+            }
+            40%{
+                mask-position: 0px 150px;
+            }
+            70%{
+                mask-position: 80% 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!-- <img src="./media/bg1.jpg" alt="" height="100%" width="100%"> -->
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit totam enim excepturi dicta optio facilis sed dignissimos aliquam fuga, quas, provident voluptatibus! Reprehenderit sint sequi nisi excepturi? Natus quos id eveniet, aliquam debitis quae obcaecati autem amet dicta labore nostrum sunt atque, cumque nemo pariatur mollitia reiciendis? Mollitia ut obcaecati quia quae ipsam repellat optio ducimus? Perspiciatis impedit modi architecto inventore et quibusdam dolor quisquam recusandae deserunt voluptas suscipit maxime culpa facilis labore vitae autem ab, magnam corporis nemo? Eos explicabo animi laborum nemo consequuntur velit sint blanditiis aut recusandae eligendi tempore ducimus et, quibusdam dolorum neque excepturi. Temporibus ipsum eos exercitationem cumque aliquam libero. Facilis vitae omnis vel inventore debitis reprehenderit nemo ipsam totam sequi! Fuga blanditiis iusto beatae molestias, quis omnis, reiciendis aut, dignissimos earum quibusdam nulla cum. Praesentium voluptas blanditiis sunt magnam excepturi explicabo. Reiciendis assumenda nam error, corporis beatae amet sit magnam incidunt quod cum unde placeat est sint nesciunt explicabo dolores, sequi aut distinctio impedit quis similique totam dolorem? Perferendis nisi cum alias, aliquid amet dolorum itaque quas dolorem, inventore illum exercitationem natus, quo deserunt corrupti officia libero! Sed dolore dolorum repellendus. Doloribus velit laborum repellat, dolore inventore beatae ratione deserunt magni cum nostrum mollitia.</p>
+    </div>
+    
+</body>
+</html>

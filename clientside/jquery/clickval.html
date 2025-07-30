@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="val(1)">1</button>
+    <button onclick="val(2)">2</button>
+    <button onclick="val(3)">3</button>
+
+    <script>
+        function val(value) {
+            console.log(value);
+            var cc = ['r' , "p" , "s"];
+            let randomcchoice = cc[Math.round(Math.random()*(cc.length-1))]
+            console.log(randomcchoice)
+        }
+    </script>
+    
+</body>
+</html>

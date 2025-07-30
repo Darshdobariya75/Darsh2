@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision</title>
+    <style>
+        *{margin: 0;}
+        .header-head{
+            /* margin: 0; */
+            font-size: 50px;
+            opacity: 1;
+            font-weight: bolder;
+            text-align: center;
+            background-color: #8EC3B0;
+            color: white;
+            background-image: url(./media/icon.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position-x: 200px;
+        }
+        nav{
+            background-color: #BCEAD5;
+        }
+        ul{
+            display: flex;
+            list-style-type: none;
+            justify-content: space-around;
+        }
+        li{
+            padding: 1%;
+        }
+        a{
+            text-decoration: none;
+        }
+        .nav-galary{
+            position: relative;
+        }
+        .galarylist{
+            display: block;
+            background-color: #8EC3B0;
+            width: 200px;
+            /* padding: %; */
+            position: absolute;
+            visibility: hidden;
+        }
+        .nav-galary:hover .galarylist{
+            visibility: visible;
+        }
+        .para{
+            width: 80%;
+            text-align: justify;
+            margin-left: 10%;
+            margin-top: 2%;
+            text-indent: 150px;
+            text-align-last: center;
+            line-height: 2;
+            word-spacing: 2px;
+        }
+        .admins{
+            display: flex;
+            justify-content: space-around;
+        }
+        .admin1{
+            height: 200px;
+            width: 200px;
+            border: 2px solid #8EC3B0;
+            background-color: #8EC3B0;
+            border-radius: 50%;
+            transition-duration: 2s;
+        }
+        .admin1:hover{
+            transform: scale(1.5);
+        }
+        footer{
+            height: 50px;
+            background-color: #8EC3B0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-head">Grras Solutions</div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About us</a></li>
+            <li class="nav-galary"><a href="">Gallary </a>
+                <ul class="galarylist">
+                    <li><a href="">Profiles</a></li>
+                    <li><a href="">Employee</a></li>
+                    <li><a href="">Students</a></li>
+                </ul>
+            </li>
+            <li><a href="">Career</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore mollitia tempora laudantium unde saepe recusandae repellat, suscipit voluptatum molestias quia nemo voluptate officia, veritatis minima optio, aut quod maiores ab dolore? Quas laboriosam cum culpa excepturi eos laudantium aspernatur nam, perspiciatis aperiam, accusamus facilis omnis ipsum, enim architecto nihil nostrum minus eius illum. Nobis quaerat deleniti distinctio a eaque necessitatibus ullam, accusantium, at, maiores sed enim quos! Aspernatur nihil itaque possimus odio quasi cum deserunt quia eos temporibus magnam assumenda fugit veniam maxime recusandae quae adipisci minima rerum dignissimos exercitationem earum sint laboriosam, dolore consequatur minus! Aliquam deleniti omnis in cumque fuga, culpa pariatur quidem quasi animi, molestiae doloribus nulla nesciunt. Eos, ipsa expedita inventore assumenda placeat a eius quisquam sunt amet ea mollitia deserunt, maiores minus, culpa repellat ad obcaecati incidunt quos nemo veritatis saepe natus! Alias minima dolorum qui, assumenda iusto delectus, unde aliquid dolores doloribus ratione possimus quibusdam incidunt maiores debitis iste. Nesciunt perferendis, alias minus in itaque dicta, nostrum assumenda possimus inventore quod quidem? Animi rerum at nulla qui accusantium quaerat vitae consequatur cum incidunt magni. Tempora quas vitae tenetur ea ad, officiis nihil possimus enim reiciendis voluptatem magnam modi nam? Eaque quod nobis neque, iure accusamus quo assumenda, est laudantium velit culpa incidunt in porro tempora distinctio ad id? Commodi repellendus debitis sequi doloribus libero? Quidem in, sit ducimus corrupti aliquid voluptatem quo ab inventore enim maiores unde quos obcaecati rerum error magni nam at, impedit id aliquam modi, assumenda fuga! Eius et cupiditate laudantium, adipisci impedit, quas voluptas expedita quidem fugit voluptate harum molestias doloremque dolorem tenetur ratione. Provident eveniet nihil rerum ea eius, fugiat asperiores quibusdam sunt earum debitis sed optio dolor, laboriosam nesciunt officia mollitia. Aut vero ab cum quasi totam praesentium, eveniet natus nisi ad magnam numquam fuga, molestias mollitia ducimus?</div>
+        <div class="admins">
+            <div class="admin1"></div>
+            <div class="admin1"></div>
+            <div class="admin1"></div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>

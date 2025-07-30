@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product api</title>
+    <style>
+        #container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .box{
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Products
+        <button onclick="window.open('http://127.0.0.1:5500/cart.html')">Go to Cart</button>
+    </h1>
+
+    <div id="container">
+
+    </div>
+    
+
+    <script>
+        async function apifetch() {
+            let api = await fetch("https://fakestoreapi.com/products");
+            let jd = await api.json();
+
+            var result = ``
+            for(i=0;i<jd.length;i++){
+                result+=`
+                <div class='box'>
+                    <img src='${jd[i]['image']}' height='50%' width='50%' /> <br/>
+                    Product Name : ${jd[i]['title']}
+                </div>
+                `
+            }
+            document.getElementById("container").innerHTML = result;
+        }
+        apifetch();
+    </script>
+</body>
+</html>
